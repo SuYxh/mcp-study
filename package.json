@@ -1,0 +1,15 @@
+{
+  "name": "mcp-study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:weather": "node apps/mcp-client/dist/index.js apps/weather-mcp-server/dist/index.js",
+    "dev:fetch": "node apps/mcp-client/dist/index.js apps/fetch-mcp-server/dist/index.js",
+    "build": "pnpm -r build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
