@@ -69,24 +69,14 @@ async function getWeather({ location }: { location: string }) {
 // Register weather tool using the new getWeather function
 server.tool(
   "get-weather-forecast",
-  "Get tomorrow's weather forecast for a specific location using QWeather API.",
+  "获取指定城市明天的天气预报",
   {
-    location: z.string().describe("City name (e.g., Beijing) or comma-separated longitude,latitude (e.g., 116.41,39.92)"),
+    location: z.string().describe("城市名，如：北京、上海"),
   },
   async ({ location }) => {
     const weatherResult = await getWeather({ location });
 
-    if (typeof weatherResult === 'string') {
-      // Error message string
-      return {
-        content: [
-          {
-            type: "text",
-            text: weatherResult,
-          },
-        ],
-      };
-    }
+    // 可以对 weatherResult 进行进一步处理，例如提取需要的信息
 
     return {
       content: [
@@ -106,7 +96,7 @@ async function main() {
   }
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("Weather MCP Server running on stdio");
+  console.log("✅ 天气MCP服务已启动！等待AI调用...");
 }
 
 main().catch((error) => {

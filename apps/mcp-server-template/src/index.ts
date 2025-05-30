@@ -106,7 +106,7 @@ async function main() {
   }
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("Weather MCP Server running on stdio");
+  console.log("✅ 天气MCP服务已启动！等待AI调用...");
 }
 
 main().catch((error) => {
