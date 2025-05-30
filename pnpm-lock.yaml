@@ -73,6 +73,35 @@ importers:
       '@types/node': 22.15.24
       typescript: 5.8.3
 
+  apps/prompts-mcp-server:
+    specifiers:
+      '@biomejs/biome': ^1.9.4
+      '@larksuiteoapi/node-sdk': ^1.46.0
+      '@modelcontextprotocol/sdk': 1.9.0
+      '@rslib/core': ^0.6.3
+      '@types/express': ^5.0.1
+      '@types/node': ^22.8.1
+      dotenv: ^16.5.0
+      express: ^5.1.0
+      typescript: ^5.8.3
+      zod: ^3.24.2
+      zod-to-json-schema: ^3.24.5
+      zod-validation-error: ^3.4.0
+    dependencies:
+      '@larksuiteoapi/node-sdk': 1.47.1
+      '@modelcontextprotocol/sdk': 1.9.0
+      dotenv: 16.5.0
+      express: 5.1.0
+      zod: 3.25.36
+      zod-to-json-schema: 3.24.5_zod@3.25.36
+      zod-validation-error: 3.4.1_zod@3.25.36
+    devDependencies:
+      '@biomejs/biome': 1.9.4
+      '@rslib/core': 0.6.9_typescript@5.8.3
+      '@types/express': 5.0.2
+      '@types/node': 22.15.24
+      typescript: 5.8.3
+
   apps/weather-mcp-server:
     specifiers:
       '@biomejs/biome': ^1.9.4
